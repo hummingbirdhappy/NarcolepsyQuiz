@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quiz_start_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gradient_deepblue" />
+
+    <TextView
+        android:id="@+id/quiz_end_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/quiz_start_margin_bottom"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_marginRight="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/quiz_start_margin_top"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/extra_line_spacing"
+        android:text="@string/quiz_end_text"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="@dimen/start_results_text" />
+
+    <Button
+        android:id="@+id/main_menu_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quiz_end_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/vertical_margin"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_marginRight="@dimen/horizontal_margin"
+        android:background="@drawable/rounded_button"
+        android:text="@string/main_menu_button" />
+
+    <Button
+        android:id="@+id/learn_more_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_menu_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_marginRight="@dimen/horizontal_margin"
+        android:background="@drawable/rounded_button"
+        android:text="@string/learn_more_button" />
+</RelativeLayout>

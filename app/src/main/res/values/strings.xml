@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">Suddenly Sleepy Saturday</string>
+    <string name="quiz_label">Narcolepsy Quiz</string>
+    <string name="learn_label">Learn</string>
+    <string name="epworth_info_text">Take the Epworth Sleepiness Scale</string>
+    <string name="quiz_info_text">Test your knowledge about narcolepsy</string>
+    <string name="learn_info_text">Learn more about narcolepsy</string>
+    <string name="epworth_start_button">Get My Score</string>
+    <string name="quiz_start_button">Start Quiz</string>
+    <string name="learn_start_button">Learn</string>
+    <string name="learn_more_button">Learn more</string>
+    <string name="start_button">Start</string>
+    <string name="next_button">Next</string>
+    <string name="main_menu_button">Main menu</string>
+    <string name="submit_button">Submit</string>
+    <string name="quiz_intro_text">In this quiz, you will be given questions that test your
+        knowledge on narcolepsy.</string>
+    <string name="q1_text">What is narcolepsy?</string>
+    <string name="q1_answer1">A chronic neurological disorder that affects the brain\'s ability to
+        regulate sleep-wake cycles</string>
+    <string name="q1_answer2">A sleep disorder in which the airway is repeatedly partially or
+        completely obstructed during sleep</string>
+    <string name="q1_answer3">A mood disorder that results in fatigue and sleep
+        disturbances</string>
+    <string name="q1_answer4">a neurological disorder with sudden recurrent episodes of sensory
+        disturbance, loss of consciousness, or convulsions</string>
+    <string name="q2_text">Which of the following are symptoms of narcolepsy?</string>
+    <string name="q2_answer1">Excessive daytime sleepiness</string>
+    <string name="q2_answer2">Cataplexy</string>
+    <string name="q2_answer3">Sleep paralysis</string>
+    <string name="q2_answer4">Hallucinations</string>
+    <string name="q2_answer5">Loud snoring</string>
+    <string name="q3_text">What is cataplexy?</string>
+    <string name="q3_answer1">A strong emotional response</string>
+    <string name="q3_answer2">A sudden loss of muscle tone while conscious</string>
+    <string name="q3_answer3">Muscle paralysis</string>
+    <string name="q3_answer4">Fainting and collapsing</string>
+    <string name="q4_text">Narcolepsy with cataplexy is called:</string>
+    <string name="q4_answer1">Type 1 narcolepsy</string>
+    <string name="q4_answer2">Type 2 narcolepsy</string>
+    <string name="q5_text">Which of the following are required to establish a diagnosis of
+        narcolepsy?</string>
+    <string name="q5_answer1">Sleep journal over 1 to 2 week period</string>
+    <string name="q5_answer2">Polysomnogram (PSG)</string>
+    <string name="q5_answer3">Multiple Sleep Latency Test (MSLT)</string>
+    <string name="q5_answer4">Medical history</string>
+    <string name="q6_text">Is there a cure for narcolepsy?</string>
+    <string name="q6_answer1">Yes</string>
+    <string name="q6_answer2">No</string>
+    <string name="q7_text">Can narcolepsy be effectively treated?</string>
+    <string name="q7_answer1">Yes</string>
+    <string name="q7_answer2">No</string>
+    <string name="q8_text">How can narcolepsy be treated?</string>
+    <string name="q8_answer1">More sleep</string>
+    <string name="q8_answer2">A special diet</string>
+    <string name="q8_answer3">Medication and lifestyle changes</string>
+    <string name="q8_answer4">A device that promotes alertness</string>
+    <string name="q9_text">Type 1 narcolepsy is caused by a loss of neurons that produce which
+        neurotransmitters?</string>
+    <string name="q10_text">What estimated percent of people with narcolepsy remain
+        undiagnosed?</string>
+    <string name="q10_answer1">30%</string>
+    <string name="q10_answer2">40%</string>
+    <string name="q10_answer3">50%</string>
+    <string name="q10_answer4">60%</string>
+    <string name="quiz_end_text">Thanks for taking the Narcolepsy Quiz! Happy Suddenly Sleepy
+        Saturday!</string>
+    <string name="epworth_intro_text1"><b>How likely are you to doze off or fall asleep in the
+        following situations, in contrast to feeling just tired?</b> This refers to your usual way of
+        life in recent times. Even if you haven\'t done some of these things recently, try to work
+        out how they would have affected you.</string>
+    <string name="epworth_intro_text2">Use the following scale to choose the most appropriate
+        number for each situation:</string>
+    <string name="epworth_intro_text3">It is important that you answer each question as best you
+        can.</string>
+    <string name="epworth_number0">0</string>
+    <string name="epworth_number1">1</string>
+    <string name="epworth_number2">2</string>
+    <string name="epworth_number3">3</string>
+    <string name="epworth_descrip0">would never doze or sleep</string>
+    <string name="epworth_descrip1">slight chance of dozing or sleeping</string>
+    <string name="epworth_descrip2">moderate chance of dozing or sleeping</string>
+    <string name="epworth_descrip3">high chance of dozing or sleeping</string>
+    <string name="epworth_situation1">Sitting and reading</string>
+    <string name="epworth_situation2">Watching TV</string>
+    <string name="epworth_situation3">Sitting inactive in a public place</string>
+    <string name="epworth_situation4">Being a passenger in a car for an hour</string>
+    <string name="epworth_situation5">Lying down to rest in the afternoon</string>
+    <string name="epworth_situation6">Sitting and talking to someone</string>
+    <string name="epworth_situation7">Sitting quietly after lunch with no alcohol</string>
+    <string name="epworth_situation8">Stopping for a few minutes in traffic while driving</string>
+    <string name="epworth_results_text">Your total ESS score is</string>
+    <string name="epworth_results_explanation">How to interpret your score:</string>
+    <string name="epworth_results_normal">0-10 Normal Amount Daytime Sleepiness</string>
+    <string name="epworth_results_mild">11-12 Mild Excessive Daytime Sleepiness</string>
+    <string name="epworth_results_moderate">13-15 Moderate Excessive Daytime Sleepiness</string>
+    <string name="epworth_results_severe">16-24 Severe Excessive Daytime Sleepiness</string>
+    <string name="narcolepsy_info_text"><b>Narcolepsy</b> is a chronic neurological disorder that
+        affects the brain\'s ability to regulate sleep-wake cycles. It is characterized by <b>excessive
+            daytime sleepiness</b>. Other classic symptoms of narcolepsy are <b>cataplexy</b>,
+        <b>sleep paralysis</b>, and <b>hallucinations</b>. Unfortunately, an estimated <b>50%</b>
+         of people with narcolepsy remain undiagnosed.</string>
+    <string name="narcolepsy_info_text2"><b>Cataplexy</b> is a sudden loss of muscle tone while a
+        person is conscious. Oftentimes, it is triggered by sudden, strong emotions (e.g. laughter).
+        Narcolepsy with cataplexy is called <b>Type 1 narcolepsy</b>. Narcolepsy without cataplexy
+        is called <b>Type 2 narcolepsy</b>.</string>
+    <string name="narcolepsy_info_text3">There may be several causes of narcolepsy. In particular,
+        research suggests that narcolepsy with cataplexy is caused by loss of neurons that produce
+        <b>hypocretins</b>, Hypocretin-1(orexin-A) and Hypocretin-2(orexin-B), neurotransmitters
+        that promote wakefulness and suppress rapid-eye-movement (REM) sleep. There are also genetic
+        factors, as most people with narcolepsy with cataplexy carry the gene human leukocyte antigen
+        (HLA)-DQB1*0602, which is important for the immune system. This suggests that narcolepsy
+        may be an autoimmune disorder, in which the immune system kills hypocretin-producing cells.</string>
+    <string name="narcolepsy_info_text4">To establish a diagnosis of narcolepsy, two sleep tests
+        are required: a <b>polysomnogram(PSG, or overnight sleep study)</b>, and a <b>multiple
+            sleep latencytest(MSLT)</b>. Additionally, a clinical examination and detailed <b>medical
+            history</b> are essential for the diagnosis and treatment of narcolepsy. Doctors may request
+        their patients to keep a sleep journal over a one- to two- week period.</string>
+    <string name="narcolepsy_info_text5">While there is no cure for narcolepsy, it can be
+        effectively treated with a combination of <b>medication and lifestyle changes</b>. Medications
+        commonly prescribed for narcolepsy include Modafinil, amphetamines and related stimulants,
+        antidepressants, and sodium oxybate(Xyrem). Lifestyle changes include taking short naps,
+        maintaining a regular sleep schedule, avoiding caffeine or alcohol before bed, and exercising
+        daily.</string>
+</resources>
