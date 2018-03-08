@@ -1,72 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.narcolepsyquiz.EpworthResultsActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/gradient_nightfade" />
-
-    <TextView
-        android:id="@+id/epworth_results_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/vertical_margin"
-        android:layout_marginTop="@dimen/vertical_margin"
-        android:gravity="center"
-        android:text="@string/epworth_results_text"
-        android:textColor="@color/colorPrimaryLight"
-        android:textSize="@dimen/start_results_text" />
-
-    <TextView
-        android:id="@+id/epworth_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/epworth_results_text"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="sans-serif-light"
-        android:gravity="center"
-        android:text="0"
-        android:textColor="@color/colorPrimaryLight"
-        android:textSize="@dimen/score_text" />
-
-    <TextView
-        android:id="@+id/epworth_score_explanation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/epworth_score"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:text="@string/epworth_results_explanation"
-        android:textColor="@color/colorPrimaryLight"
-        android:textSize="@dimen/explanation_text" />
-
-    <TextView
-        android:id="@+id/epworth_score_range"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/epworth_score_explanation"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/epworth_results_margin"
-        android:layout_marginTop="@dimen/vertical_margin"
-        android:gravity="center"
-        android:text=""
-        android:textColor="@color/colorPrimaryLight"
-        android:textSize="@dimen/epworth_text" />
-
-    <Button
-        android:id="@+id/main_menu_button"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/epworth_score_range"
-        android:layout_marginLeft="@dimen/horizontal_margin"
-        android:layout_marginRight="@dimen/horizontal_margin"
-        android:background="@drawable/rounded_button"
-        android:text="@string/main_menu_button" />
-</RelativeLayout>
+        tools:context="com.example.android.narcolepsyquiz.EpworthResultsActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gradient_nightfade" />
+
+        <TextView
+            android:id="@+id/epworth_results_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:gravity="center"
+            android:text="@string/epworth_results_text"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/start_results_text" />
+
+        <TextView
+            android:id="@+id/epworth_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/epworth_results_text"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/score_text" />
+
+        <TextView
+            android:id="@+id/epworth_score_explanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/epworth_score"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/epworth_results_explanation"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/explanation_text" />
+
+        <TextView
+            android:id="@+id/epworth_score_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/epworth_score_explanation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/epworth_results_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/epworth_text" />
+
+        <Button
+            android:id="@+id/main_menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/epworth_score_range"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:background="@drawable/rounded_button"
+            android:text="@string/main_menu_button" />
+    </RelativeLayout>
+</ScrollView>
