@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.ViewFlipper;
 
 public class QuestionActivity extends AppCompatActivity {
@@ -23,6 +24,8 @@ public class QuestionActivity extends AppCompatActivity {
 
     CheckBox q2_answer1, q2_answer2, q2_answer3, q2_answer4, q2_answer5, q5_answer1, q5_answer2,
             q5_answer3, q5_answer4;
+
+    RadioGroup q1_rg1, q1_rg2, q3_rg1, q3_rg2, q8_rg1, q8_rg2, q10_rg1, q10_rg2;
 
     EditText q9_field;
 
@@ -41,6 +44,36 @@ public class QuestionActivity extends AppCompatActivity {
         q5_answer2 = findViewById(R.id.q5_answer2);
         q5_answer3 = findViewById(R.id.q5_answer3);
         q5_answer4 = findViewById(R.id.q5_answer4);
+
+        // Get all RadioGroups
+        q1_rg1 = findViewById(R.id.q1_rg1);
+        q1_rg2 = findViewById(R.id.q1_rg2);
+        q3_rg1 = findViewById(R.id.q3_rg1);
+        q3_rg2 = findViewById(R.id.q3_rg2);
+        q8_rg1 = findViewById(R.id.q8_rg1);
+        q8_rg2 = findViewById(R.id.q8_rg2);
+        q10_rg1 = findViewById(R.id.q10_rg1);
+        q10_rg2 = findViewById(R.id.q10_rg2);
+
+        // Start fresh, with no selection on either RadioGroup of a question
+        q1_rg1.clearCheck();
+        q1_rg2.clearCheck();
+        q3_rg1.clearCheck();
+        q3_rg2.clearCheck();
+        q8_rg1.clearCheck();
+        q8_rg2.clearCheck();
+        q10_rg1.clearCheck();
+        q10_rg2.clearCheck();
+
+        // Makes the two RadioGroups of a question work as one
+        q1_rg1.setOnCheckedChangeListener(q1Listener1);
+        q1_rg2.setOnCheckedChangeListener(q1Listener2);
+        q3_rg1.setOnCheckedChangeListener(q3Listener1);
+        q3_rg2.setOnCheckedChangeListener(q3Listener2);
+        q8_rg1.setOnCheckedChangeListener(q8Listener1);
+        q8_rg2.setOnCheckedChangeListener(q8Listener2);
+        q10_rg1.setOnCheckedChangeListener(q10Listener1);
+        q10_rg2.setOnCheckedChangeListener(q10Listener2);
 
         // ProgressBar object
         final ProgressBar quizProgressBar = findViewById(R.id.determinateBar);
@@ -95,6 +128,106 @@ public class QuestionActivity extends AppCompatActivity {
             }
         });
     }
+
+    private RadioGroup.OnCheckedChangeListener q1Listener1 = new RadioGroup.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId != -1) {
+                q1_rg2.setOnCheckedChangeListener(null); // remove the listener before clearing so we don't throw that stackoverflow exception(like Vladimir Volodin pointed out)
+                q1_rg2.clearCheck(); // clear the second RadioGroup!
+                q1_rg2.setOnCheckedChangeListener(q1Listener2); //reset the listener
+            }
+        }
+    };
+
+
+    private RadioGroup.OnCheckedChangeListener q1Listener2 = new RadioGroup.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId != -1) {
+                q1_rg1.setOnCheckedChangeListener(null);
+                q1_rg1.clearCheck();
+                q1_rg1.setOnCheckedChangeListener(q1Listener1);
+            }
+        }
+    };
+
+    private RadioGroup.OnCheckedChangeListener q3Listener1 = new RadioGroup.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId != -1) {
+                q3_rg2.setOnCheckedChangeListener(null); // remove the listener before clearing so we don't throw that stackoverflow exception(like Vladimir Volodin pointed out)
+                q3_rg2.clearCheck(); // clear the second RadioGroup!
+                q3_rg2.setOnCheckedChangeListener(q3Listener2); //reset the listener
+            }
+        }
+    };
+
+
+    private RadioGroup.OnCheckedChangeListener q3Listener2 = new RadioGroup.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId != -1) {
+                q3_rg1.setOnCheckedChangeListener(null);
+                q3_rg1.clearCheck();
+                q3_rg1.setOnCheckedChangeListener(q3Listener1);
+            }
+        }
+    };
+
+    private RadioGroup.OnCheckedChangeListener q8Listener1 = new RadioGroup.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId != -1) {
+                q8_rg2.setOnCheckedChangeListener(null); // remove the listener before clearing so we don't throw that stackoverflow exception(like Vladimir Volodin pointed out)
+                q8_rg2.clearCheck(); // clear the second RadioGroup!
+                q8_rg2.setOnCheckedChangeListener(q8Listener2); //reset the listener
+            }
+        }
+    };
+
+
+    private RadioGroup.OnCheckedChangeListener q8Listener2 = new RadioGroup.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId != -1) {
+                q8_rg1.setOnCheckedChangeListener(null);
+                q8_rg1.clearCheck();
+                q8_rg1.setOnCheckedChangeListener(q8Listener1);
+            }
+        }
+    };
+
+    private RadioGroup.OnCheckedChangeListener q10Listener1 = new RadioGroup.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId != -1) {
+                q10_rg2.setOnCheckedChangeListener(null); // remove the listener before clearing so we don't throw that stackoverflow exception(like Vladimir Volodin pointed out)
+                q10_rg2.clearCheck(); // clear the second RadioGroup!
+                q10_rg2.setOnCheckedChangeListener(q10Listener2); //reset the listener
+            }
+        }
+    };
+
+
+    private RadioGroup.OnCheckedChangeListener q10Listener2 = new RadioGroup.OnCheckedChangeListener() {
+
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId != -1) {
+                q10_rg1.setOnCheckedChangeListener(null);
+                q10_rg1.clearCheck();
+                q10_rg1.setOnCheckedChangeListener(q10Listener1);
+            }
+        }
+    };
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
