@@ -22,6 +22,8 @@ public class QuestionActivity extends AppCompatActivity {
 
     boolean q1, q2, q3, q4, q5, q6, q7, q8, q9, q10;
 
+    ViewFlipper questionFlipper;
+
     CheckBox q2_answer1, q2_answer2, q2_answer3, q2_answer4, q2_answer5, q5_answer1, q5_answer2,
             q5_answer3, q5_answer4;
 
@@ -32,7 +34,24 @@ public class QuestionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // If not null, retrieve quiz score
+        if ((savedInstanceState != null)){
+            quizScore = savedInstanceState.getInt("quizScore");
+            q1 = savedInstanceState.getBoolean("q1");
+            q2 = savedInstanceState.getBoolean("q2");
+            q3 = savedInstanceState.getBoolean("q3");
+            q4 = savedInstanceState.getBoolean("q4");
+            q5 = savedInstanceState.getBoolean("q5");
+            q6 = savedInstanceState.getBoolean("q6");
+            q7 = savedInstanceState.getBoolean("q7");
+            q8 = savedInstanceState.getBoolean("q8");
+            q9 = savedInstanceState.getBoolean("q9");
+            q10 = savedInstanceState.getBoolean("q10");
+        }
         setContentView(R.layout.activity_question);
+
+        // Get the ViewFlipper for all questions
+        questionFlipper = findViewById( R.id.question_flipper);
 
         // Get all checkboxes
         q2_answer1 = findViewById(R.id.q2_answer1);
@@ -99,7 +118,6 @@ public class QuestionActivity extends AppCompatActivity {
                 String q9_answer = q9_field.getText().toString();
                 if (q9_answer.equals("Hypocretins")) {
                     q9 = true;
-                    return;
                 }
             }
         }
@@ -110,7 +128,6 @@ public class QuestionActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (currentQuestion < 10) {
                     // Flips to next view
-                    ViewFlipper questionFlipper = (ViewFlipper) findViewById( R.id.question_flipper);
                     questionFlipper.showNext();
                     // Changes the number of the current question
                     currentQuestion += 1;
@@ -127,6 +144,27 @@ public class QuestionActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    /*
+    *Save UI state changes to the savedInstanceState.
+    *This bundle will be passed to onCreate if the process is
+    * killed and restarted.
+    */
+    @Override
+    protected void onSaveInstanceState(Bundle vars){
+        super.onSaveInstanceState(vars);
+        vars.putInt("quizScore",quizScore);
+        vars.putBoolean("q1",q1);
+        vars.putBoolean("q2",q2);
+        vars.putBoolean("q3",q3);
+        vars.putBoolean("q4",q4);
+        vars.putBoolean("q5",q5);
+        vars.putBoolean("q6",q6);
+        vars.putBoolean("q7",q7);
+        vars.putBoolean("q8",q8);
+        vars.putBoolean("q9",q9);
+        vars.putBoolean("q10",q10);
     }
 
     private RadioGroup.OnCheckedChangeListener q1Listener1 = new RadioGroup.OnCheckedChangeListener() {
