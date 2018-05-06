@@ -19,7 +19,6 @@ public class QuestionActivity extends AppCompatActivity {
     int currentQuestion = 1;
     int quizScore = 0;
     int position;
-    //int flipperPosition;
 
     boolean q1, q2, q3, q4, q5, q6, q7, q8, q9, q10;
 
@@ -307,9 +306,6 @@ public class QuestionActivity extends AppCompatActivity {
     }
 
     public void onCheckboxClicked(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
-
         // Check which checkboxes were clicked
         switch(view.getId()) {
             case R.id.q2_answer1:
