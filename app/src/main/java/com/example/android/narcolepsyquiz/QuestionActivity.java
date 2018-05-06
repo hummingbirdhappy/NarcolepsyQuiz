@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -19,6 +18,8 @@ public class QuestionActivity extends AppCompatActivity {
 
     int currentQuestion = 1;
     int quizScore = 0;
+    int position;
+    //int flipperPosition;
 
     boolean q1, q2, q3, q4, q5, q6, q7, q8, q9, q10;
 
@@ -47,11 +48,16 @@ public class QuestionActivity extends AppCompatActivity {
             q8 = savedInstanceState.getBoolean("q8");
             q9 = savedInstanceState.getBoolean("q9");
             q10 = savedInstanceState.getBoolean("q10");
+            currentQuestion = savedInstanceState.getInt("currentQuestion");
+            position = savedInstanceState.getInt("POSITION");
         }
         setContentView(R.layout.activity_question);
 
         // Get the ViewFlipper for all questions
         questionFlipper = findViewById( R.id.question_flipper);
+
+        // Sets the ViewFlipper to the correct View
+        questionFlipper.setDisplayedChild(position);
 
         // Get all checkboxes
         q2_answer1 = findViewById(R.id.q2_answer1);
@@ -98,7 +104,7 @@ public class QuestionActivity extends AppCompatActivity {
         final ProgressBar quizProgressBar = findViewById(R.id.determinateBar);
 
         // Button object for check button
-        Button checkQuestionButton = findViewById(R.id.check_button);
+        final Button checkQuestionButton = findViewById(R.id.check_button);
 
         // Get user input for 9th question
         q9_field = findViewById(R.id.q9_field);
@@ -134,7 +140,6 @@ public class QuestionActivity extends AppCompatActivity {
                     // Increases amount of progress in progress bar
                     quizProgressBar.incrementProgressBy(10);
                 }
-
                 else if (currentQuestion == 10) {
                     // Navigates to quiz results screen
                     int score = keepScore();
@@ -165,6 +170,9 @@ public class QuestionActivity extends AppCompatActivity {
         vars.putBoolean("q8",q8);
         vars.putBoolean("q9",q9);
         vars.putBoolean("q10",q10);
+        vars.putInt("currentQuestion",currentQuestion);
+        position = questionFlipper.getDisplayedChild();
+        vars.putInt("POSITION",position);
     }
 
     private RadioGroup.OnCheckedChangeListener q1Listener1 = new RadioGroup.OnCheckedChangeListener() {
